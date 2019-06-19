@@ -19,8 +19,12 @@ function myHandler2(e) {
 
 var scene = document.getElementById("scene");
 
-scene.addEventListener('click', function() { 
-	aud.play();
-	console.log('tap');
+scene.addEventListener('click', function() {
+	if(aud2.paused && aud3.paused) {
+		aud.play();
+		console.log('tap');
+	} else {
+		consolelog('other videos are playing');
+	}
 });
 })
